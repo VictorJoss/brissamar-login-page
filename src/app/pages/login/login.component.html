@@ -1,6 +1,27 @@
-<app-default-login-layout 
-    title="Inicia sesión con tu cuenta"
-    primaryButtonText="Iniciar sesión"
-    secondaryButtonText="Regístrate"
+<app-default-login-layout
+  title="Inicia sesión con tu cuenta"
+  primaryButtonText="Iniciar sesión"
+  secondaryButtonText="Regístrate"
 >
+  <form [formGroup]="loginForm">
+    <app-primary-input
+        formControlName="email"
+        inputName="email"
+        type="email"
+        label="Correo electrónico"
+        placeholder="myemail@gmail.com"
+    >
+      <img src="\assets\img\email-icon.svg" alt="" />
+    </app-primary-input>
+    <app-primary-input
+        formControlName="password"
+        inputName="password"
+        type="password"
+        label="Contraseña"
+        placeholder="********"
+    >
+        <img src="\assets\img\password-icon.svg" alt="" />
+    </app-primary-input>
+    <span>Olvidó su contraseña?</span>
+  </form>
 </app-default-login-layout>
