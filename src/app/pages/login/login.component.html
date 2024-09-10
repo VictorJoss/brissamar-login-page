@@ -2,6 +2,8 @@
   title="Inicia sesión con tu cuenta"
   primaryButtonText="Iniciar sesión"
   secondaryButtonText="Regístrate"
+  (submit)="submit()" 
+  (navigate)="navigate()"
 >
   <form [formGroup]="loginForm">
     <app-primary-input
